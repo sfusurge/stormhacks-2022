@@ -1,8 +1,50 @@
+@mixin font($font-size: 22px, $font-weight: 400, $font-family) {
+  font: $font-weight $font-size $font-family;
+  letter-spacing: 0.03em;
+}
+
+@mixin regular($font-size, $font-family) {
+  @include font($font-size, 400, $font-family);
+}
+
+@mixin medium($font-size, $font-family) {
+  @include font($font-size, 500, $font-family);
+}
+
+@mixin semiBold($font-size, $font-family) {
+  @include font($font-size, 600, $font-family);
+}
+
+@mixin bold($font-size, $font-family) {
+  @include font($font-size, 700, $font-family);
+}
+
+@mixin media($size) {
+  @media screen and (max-width: $size) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin mobile {
+  @include media(500px) {
+    @content;
+  }
+}
+
+@mixin table {
+  @include media(800px) {
+    @content;
+  }
+}
+
+.span {
+  @include medium(16px, Barlow);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +52,31 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a,
+img,
+button,
+input {
+  display: block;
+}
+
+button,
+input {
+  font: inherit;
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
 }
