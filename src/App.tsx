@@ -3,7 +3,7 @@ import styles from './App.module.scss'
 
 import ThemeProvider from './context/Theme'
 
-import Home from './pages/Home'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Router>
           <Switch>
             <Route path="/" exact>
-              <Home />
+              <Footer />
             </Route>
           </Switch>
         </Router>

@@ -1,0 +1,42 @@
+@use '../../index.scss' as *;
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: cadetblue;
+
+  .pagesContainer {
+    .heading {
+      @include regular(40px, 'Poppins');
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+      white-space: pre-wrap;
+    }
+
+    .headingBold {
+      @include semiBold(40px, 'Poppins');
+      margin: 0;
+    }
+
+    .pageOptions {
+      display: flex;
+
+      .pageIcon {
+        width: 66px;
+        height: 66px;
+      }
+
+      .pageIconText {
+        @include medium(20px, 'Poppins');
+      }
+    }
+  }
+
+  .socialsContianer {
+    display: flex;
+    flex-direction: column;
+  }
+}
