@@ -2,7 +2,6 @@ import styles from './MenuBtn.module.scss'
 import { CSSProperties, ReactNode } from 'react'
 import { IImage } from '../Image'
 import Image from '../Image'
-import sponsors from '../../assets/pageIcons/sponsors.png'
 import { ReactComponent as Logo } from '../../assets/pageIcons/smallCube.svg'
 
 interface IMenuBtn extends IImage {
