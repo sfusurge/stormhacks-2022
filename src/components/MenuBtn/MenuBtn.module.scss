@@ -1,0 +1,22 @@
+@use '../../index.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .imageLink {
+    @include semiBold(24px, 'Poppins');
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 25px;
+    .img {
+      width: 27px;
+      height: 27px;
+      padding-right: 5px;
+    }
+    .btnText {
+      margin: 0;
+    }
+  }
+}
