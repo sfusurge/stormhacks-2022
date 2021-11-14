@@ -1,11 +1,19 @@
 @use '../../index.scss' as *;
 
 .container {
+  width: 100%;
+  height: max-content;
+  background: url('../../assets/backgrounds/blueRectangle.png') center center
+    fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  position: relative;
 }
 
 .textGroup {
   width: 45%;
-  margin-top: 158px;
+  padding-top: 158px;
   padding-left: 8%;
   text-align: left;
   .title {
@@ -63,4 +71,11 @@
   .smallParagraph {
     @include regular(16px, 'Barlow');
   }
+}
+
+.dragonMoonImg {
+  position: absolute;
+  width: 45%;
+  top: 223px;
+  right: 0;
 }

@@ -3,6 +3,9 @@ import styles from './Tracks.module.scss'
 import Image from '../Image'
 import motherHeart from '../../assets/pageIcons/motherHeart.svg'
 import penTip from '../../assets/pageIcons/penTip.svg'
+import puzzle from '../../assets/pageIcons/puzzle.svg'
+import lightbulb from '../../assets/pageIcons/lightbulb.svg'
+import dragonMoon from '../../assets/dragonMoon.svg'
 
 const Tracks = () => {
   const [filter, setFilter] = useState<string>('Mental health')
@@ -22,7 +25,7 @@ const Tracks = () => {
           help flesh out your next idea or solution.
         </p>
         <div className={styles.btnGroup}>
-          {filterTypes.map((filterType, i) => (
+          {filterTypes.map(filterType => (
             <button
               className={
                 filterType === filter ? styles.activeBtn : styles.inactiveBtn
@@ -38,32 +41,67 @@ const Tracks = () => {
         <div className={styles.blueBox}>
           <div className={styles.understanding}>
             <p className={styles.smallTitle}>
-              Understanding ourselves{' '}
-              <Image src={motherHeart} alt={motherHeart}></Image>
+              {filter === 'Mental health' && (
+                <>
+                  {'Understanding ourselves '}{' '}
+                  <Image src={motherHeart} alt={motherHeart} />
+                </>
+              )}
+              {filter === 'Accessibility' && (
+                <>
+                  {'Helping people live fuller lives '}{' '}
+                  <Image src={puzzle} alt={puzzle} />
+                </>
+              )}
+              {filter === 'Education' && (
+                <>
+                  {'Learning something everyday '}{' '}
+                  <Image src={lightbulb} alt={lightbulb} />
+                </>
+              )}
             </p>
             <div className={styles.smallParagraph}>
               <p>
-                With people having to quarantine due to COVID-19, mental health
-                issues amongst the population have skyrocketed or became worse
-                due to the stress from isolation and lack of job security.
+                {filter === 'Mental health' &&
+                  'With people having to quarantine due to COVID-19, mental health issues amongst the population have skyrocketed or became worse due to the stress from isolation and lack of job security.'}
+                {filter === 'Accessibility' &&
+                  'When we build anything, the baseline for functioning projects are for able-bodied people in our society.  With this track, we want you to think about how you can make a product that helps people outside of the able-bodied spectrum with any area of their lives. Some of these areas could be: '}
+                {filter === 'Education' &&
+                  'Getting an education is one of the greatest privillages that all of us share. The fact that we are able to hack together and get hands-on experience with the things we’ve learned in the classroom is something that we should all be grateful for'}
               </p>
               <p>
-                However, mental health resources such as therapists are often
-                unaffordable and many counseling services are backed up with
-                long waitlists. Despite these mental health crises, people can
-                still improve their circumstances in areas which include but are
-                not limited to:
+                {filter === 'Mental health' &&
+                  'However, mental health resources such as therapists are often unaffordable and many counseling services are backed up with long waitlists.  Despite these mental health crises, people can still improve their circumstances in areas which include but are not limited to: '}
+                {filter === 'Education' &&
+                  'Some peope aren’t able to get into a classroom. Others have ended up in a major they may not be passionate about anymore. Many others are just looking to learn something new.  How can you help people looking for a way to learn something new? How can you make education more accessible for those who need it?  '}
               </p>
-              <ul>
-                <li>Eating a more well rounded diet</li>
-                <li>Getting more intense and frequent exercise</li>
-                <li>Forming new relationships or improving current ones</li>
-                <li>Gaining access to more affordable resources</li>
-                <li>Managing their stress </li>
-              </ul>
+              {filter === 'Mental health' && (
+                <ul>
+                  <li>Eating a more well rounded diet</li>
+                  <li>Getting more intense and frequent exercise</li>
+                  <li>Forming new relationships or improving current ones</li>
+                  <li>Gaining access to more affordable resources</li>
+                  <li>Managing their stress </li>
+                </ul>
+              )}
+              {filter === 'Accessibility' && (
+                <ul>
+                  <li>{'Navigating transportation & buildings'}</li>
+                  <li>Obtaining information, including non-visual supports</li>
+                  <li>
+                    Healthcare when receiving proper diagnosis and treatment
+                  </li>
+                  <li>Finding and securing employment opportunities</li>
+                  <li>Adjusting to new languages, cultures, and places </li>
+                </ul>
+              )}
               <p className={styles.question}>
-                What are some ways you can help people improve these areas in
-                their life?
+                {filter === 'Mental health' &&
+                  'What are some ways you can help people improve these areas in their life?'}
+                {filter === 'Accessibility' &&
+                  'What are some ways in which you can make these resources more accessible/readily available to people with disabilies?'}
+                {filter === 'Education' &&
+                  'How can you make something that helps people learn outside of the classroom?'}
               </p>
             </div>
           </div>
@@ -90,6 +128,11 @@ const Tracks = () => {
           </div>
         </div>
       </div>
+      <img
+        className={styles.dragonMoonImg}
+        src={dragonMoon}
+        alt={dragonMoon}
+      ></img>
     </div>
   )
 }
