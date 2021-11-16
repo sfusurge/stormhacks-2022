@@ -1,0 +1,64 @@
+@use '../../index.scss' as *;
+
+.textContainer {
+  margin-top: 162px;
+  padding-left: 8%;
+  width: 43%;
+  text-align: left;
+  .title {
+    @include regular(48px, 'Poppins');
+    margin: 0;
+    color: #bb3cff;
+  }
+  .bold {
+    @include semiBold(48px, 'Poppins');
+  }
+  .subTitle {
+    @include medium(16px, 'Barlow');
+    margin: 0;
+  }
+
+  .socialIcons {
+    display: flex;
+    .textGroup {
+      @include medium(16px, 'Barlow');
+      display: flex;
+      align-items: center;
+      padding-right: 5%;
+    }
+    .social {
+      padding-right: 4%;
+    }
+  }
+
+  .borderBox {
+    border: 1px solid #bb3cff;
+    .textBox {
+      padding-left: 3%;
+      padding-top: 27px;
+      padding-bottom: 20px;
+      padding-right: 10%;
+      .title {
+        @include regular(24px, 'Barlow');
+        display: flex;
+        align-items: center;
+        color: #bb3cff;
+
+        .icon {
+          padding-left: 2%;
+        }
+      }
+
+      .bodyText {
+        @include medium(16px, 'Barlow');
+        margin-top: 4px;
+        .semiBold {
+          @include bold(16px, 'Barlow');
+        }
+        .thin {
+          @include regular(16px, 'Barlow');
+        }
+      }
+    }
+  }
+}
