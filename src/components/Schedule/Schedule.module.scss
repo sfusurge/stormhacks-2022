@@ -1,8 +1,20 @@
 @use '../../index.scss' as *;
 
+.container {
+  width: 100%;
+  height: max-content;
+  background: url('../../assets/backgrounds/lilacRectangle.png') top center
+    fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  position: relative;
+}
+
 .textContainer {
-  margin-top: 162px;
+  padding-top: 162px;
   padding-left: 8%;
+  padding-bottom: 139px;
   width: 43%;
   text-align: left;
   .title {
@@ -22,9 +34,11 @@
     display: flex;
     .textGroup {
       @include medium(16px, 'Barlow');
+      padding-right: 5%;
+    }
+    .hyperLink {
       display: flex;
       align-items: center;
-      padding-right: 5%;
     }
     .social {
       padding-right: 4%;
@@ -61,4 +75,11 @@
       }
     }
   }
+}
+
+.flyingBoat {
+  width: 65%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }

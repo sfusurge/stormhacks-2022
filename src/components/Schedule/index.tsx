@@ -7,6 +7,7 @@ import facebook from '../../assets/socials/facebook-black.svg'
 import instagram from '../../assets/socials/instagram-black.svg'
 import discord from '../../assets/socials/discord.svg'
 import linkedin from '../../assets/socials/linkedin-black.svg'
+import flyingBoat from '../../assets/flyingBoat.svg'
 
 interface ITime {
   days?: string
@@ -30,10 +31,26 @@ const getTime = (dueDate: string) => {
 
 const Schedule = () => {
   const socials = [
-    { name: 'Instagram', image: instagram },
-    { name: 'Facebook', image: facebook },
-    { name: 'Discord', image: discord },
-    { name: 'Linkedin', image: linkedin }
+    {
+      name: 'Instagram',
+      image: instagram,
+      link: 'https://www.instagram.com/sfusurge/'
+    },
+    {
+      name: 'Facebook',
+      image: facebook,
+      link: 'https://www.facebook.com/sfusurge'
+    },
+    {
+      name: 'Discord',
+      image: discord,
+      link: 'https://discord.com/invite/xu7CqKc'
+    },
+    {
+      name: 'Linkedin',
+      image: linkedin,
+      link: 'https://www.linkedin.com/company/sfu-surge/'
+    }
   ]
 
   const dueDate = '2023-09-02T21:00:00Z'
@@ -61,12 +78,19 @@ const Schedule = () => {
         <div className={styles.socialIcons}>
           {socials.map(social => (
             <p className={styles.textGroup}>
-              <Image
-                className={styles.social}
-                src={social.image}
-                alt={social.image}
-              />
-              {social.name}
+              <a
+                className={styles.hyperLink}
+                href={social.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Image
+                  className={styles.social}
+                  src={social.image}
+                  alt={social.image}
+                />
+                {social.name}
+              </a>
             </p>
           ))}
         </div>
@@ -94,6 +118,8 @@ const Schedule = () => {
           </div>
         </div>
       </div>
+
+      <Image className={styles.flyingBoat} src={flyingBoat} alt={flyingBoat} />
     </div>
   )
 }
