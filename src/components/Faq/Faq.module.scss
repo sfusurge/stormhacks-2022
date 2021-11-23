@@ -1,0 +1,32 @@
+@use '../../index.scss' as *;
+.container {
+  background: url('../../assets/backgrounds/hotPinkBackground.svg') top center
+    fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  text-align: left;
+  .innerContainer {
+    position: relative;
+    z-index: 5;
+    padding: 0 14%;
+    padding-top: 25vw;
+    padding-bottom: 85px;
+    .title {
+      @include regular(48px, 'Poppins');
+      color: #de2bc4;
+      margin: 0;
+      padding-left: 3.3%;
+      .bold {
+        @include semiBold(48px, 'Poppins');
+      }
+    }
+  }
+
+  .backgroundImg {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+}
