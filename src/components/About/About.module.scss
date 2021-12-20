@@ -1,0 +1,97 @@
+@use '../../index.scss' as *;
+
+.container {
+  width: 100%;
+  height: max-content;
+  background: url('../../assets/backgrounds/peachBackground.svg') top center
+    fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  position: relative;
+  overflow-x: hidden;
+
+  .topImage {
+    position: absolute;
+    right: 0%;
+    top: 0;
+    width: 65%;
+  }
+  .bottomImage {
+    position: absolute;
+    right: 0%;
+    top: 50vw;
+    width: 65%;
+  }
+}
+
+.innerContainer {
+  padding-left: 10%;
+  padding-top: 177px;
+  margin-bottom: 118px;
+  text-align: left;
+  width: 40%;
+  position: relative;
+  z-index: 1;
+  .title {
+    @include regular(48px, 'Barlow Medium');
+    color: #f06500;
+    margin: 0;
+    margin-bottom: 18px;
+    .headingBold {
+      @include semiBold(48px, 'Barlow Medium');
+    }
+  }
+  .paragraph {
+    @include medium(16px, 'Barlow Medium');
+    margin: 0;
+  }
+  .bigDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    .iconGroup {
+      @include semiBold(24px, 'Barlow');
+      width: 229px;
+      display: flex;
+      align-items: center;
+      padding-right: 2%;
+      color: #2c2c2c;
+      .icon {
+        padding-right: 7%;
+      }
+    }
+  }
+
+  .applyBtn {
+    @include semiBold(24px, 'Poppins');
+    width: 178px;
+    display: flex;
+    margin-top: 32px;
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 12%;
+    color: #f06500;
+    border: solid 1px #f06500;
+    .editIcon {
+      padding-left: 4px;
+    }
+  }
+}
+
+.headshot {
+  object-fit: contain;
+  border-radius: 100%;
+  object-position: 0px 0px; // move to proper place for face
+}
+.execGroup {
+  margin-top: 19px;
+  display: grid;
+  grid-gap: 38px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  padding: 0 10%;
+  padding-bottom: 120px;
+  position: relative;
+  z-index: 1;
+}
