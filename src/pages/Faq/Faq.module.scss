@@ -1,24 +1,31 @@
 @use '../../index.scss' as *;
 .container {
-  background: url('../../assets/backgrounds/hotPinkBackground.svg') top center
+  background: url('../../assets/backgrounds/hotPinkBackground.png') top center
     fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
   text-align: left;
+
   .innerContainer {
     position: relative;
-    z-index: 5;
-    padding: 0 14%;
-    padding-top: 25vw;
-    padding-bottom: 85px;
+    z-index: 1;
+    max-width: 1000px;
+    padding: 350px 14% 85px;
+    margin: auto;
+
+    @include media(500px) {
+      padding-top: 150px;
+    }
+
     .title {
-      @include regular(48px, 'Poppins');
+      width: 100%;
+      @include regular(48px, Poppins, 24px);
       color: #de2bc4;
       margin: 0;
-      padding-left: 3.3%;
+
       .bold {
-        @include semiBold(48px, 'Poppins');
+        @include semiBold(48px, Poppins, 24px);
       }
     }
   }

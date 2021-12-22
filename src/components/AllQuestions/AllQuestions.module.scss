@@ -1,18 +1,48 @@
+@use '../../index.scss' as *;
+
 .container {
   padding-top: 54px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  min-height: 780px;
-  .columns {
+  flex-flow: row wrap;
+  column-gap: 28px;
+  min-height: 1000px;
+  width: 100%;
+
+  .set {
     display: flex;
-    width: 45%;
-    flex-direction: column;
+    flex-flow: column wrap;
+    row-gap: 35px;
+    flex: 1 1 300px;
+
+    &:first-child {
+      padding-bottom: 35px;
+    }
+
+    .question {
+      .header {
+        @include semiBold(15px, Poppins);
+        color: $white;
+        width: calc(100% - 56px);
+        text-align: left;
+        padding: 18px 32px 18px 24px;
+        background: $hotPink;
+      }
+
+      .dropdown {
+        stroke: $white;
+        stroke-width: 2px;
+        width: 16px;
+        height: 16px;
+      }
+    }
   }
-  .question {
-    margin-bottom: 26px;
-  }
+}
+
+.answer {
+  @include regular(16px, Barlow);
+  border: 1px solid $hotPink;
+  background: rgba(255, 136, 238, 0.3);
+  padding: 20px;
 }
 
 @media only screen and (max-width: 900px) {

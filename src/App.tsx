@@ -5,6 +5,7 @@ import ThemeProvider from './context/Theme'
 
 import Footer from './components/Footer'
 import About from './pages/About'
+import FAQ from './pages/Faq'
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <About />
+            </Route>
+            <Route path="/faq">
+              <FAQ />
             </Route>
           </Switch>
           <Footer />
