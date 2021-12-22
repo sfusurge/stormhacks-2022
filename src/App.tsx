@@ -4,7 +4,7 @@ import styles from './App.module.scss'
 import ThemeProvider from './context/Theme'
 
 import Footer from './components/Footer'
-import About from './components/About'
+import About from './pages/About'
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
               <About />
             </Route>
           </Switch>
+          <Footer />
         </Router>
       </div>
     </ThemeProvider>

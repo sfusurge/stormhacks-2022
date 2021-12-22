@@ -26,6 +26,7 @@ const Image = ({
   alt = '',
   onLoad,
   className,
+  children,
   ...props
 }: IImage) => {
   const [loaded, setLoaded] = useState(false)
