@@ -54,7 +54,7 @@
     }
     .buttonText {
       @include semiBold(24px, 'Poppins');
-      width: 22%;
+      width: max(22%, 150px);
       color: #d10b00;
       border: solid 1px #d10b00;
       display: flex;
@@ -69,7 +69,24 @@
   .sponsorSection {
     padding-left: 14%;
     padding-right: 19%;
-    margin-top: 50px;
     padding-bottom: 200px;
+    padding-top: 50px;
+    .otterCloudsImg {
+      width: 100%;
+    }
+
+    .sponsorsList {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: stretch;
+      // display: grid;
+      // justify-content: center;
+      // grid-column-gap: 6px;
+      // grid-row-gap: 6px;
+      // grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    }
+    .sponsorCol {
+      flex: 1 33%;
+    }
   }
 }

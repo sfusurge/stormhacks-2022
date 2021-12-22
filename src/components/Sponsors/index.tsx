@@ -40,8 +40,11 @@ const Sponsors = () => {
           alt={otterInTheClouds}
           className={styles.otterCloudsImg}
         ></Image>
-        {/* 
         <div className={styles.sponsorsList}>
+          {/*
+          
+          /To add when there are sponsors
+
           {sponsors.map(sponsor => (
             <div className={styles.sponsorCol}>
               <Image
@@ -51,8 +54,8 @@ const Sponsors = () => {
               ></Image>
             </div>
           ))}
+          */}
         </div>
-        */}
       </div>
     </div>
   )
