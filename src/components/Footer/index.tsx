@@ -1,5 +1,5 @@
 import styles from './Footer.module.scss'
-import LinkButton from '../ImageLink'
+import LinkButton from '../ImageText'
 import socials from '../../utils/socials'
 import pageIcons from '../../utils/pageIcons'
 
@@ -19,7 +19,6 @@ const Footer = () => {
               src={src}
               alt={alt}
               link={link}
-              hasText={true}
             >
               <p className={styles.pageIconText} style={{ color: color }}>
                 {id}
