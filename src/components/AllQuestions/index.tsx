@@ -1,7 +1,6 @@
 import styles from './AllQuestions.module.scss'
 import questions from '../../assets/data/questions'
 import Dropdown from '../Dropdown'
-import { useState } from 'react'
 
 const AllQuestions = () => {
   // const [open, setOpen] = useState(-1)

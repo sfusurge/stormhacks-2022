@@ -60,6 +60,7 @@ const Dropdown = ({
     document.body.appendChild(fakeChild)
     setHeight(fakeChild.clientHeight)
     document.body.removeChild(fakeChild)
+    // eslint-disable-next-line
   }, [
     children,
     dropdownRef.current?.clientHeight,
@@ -68,6 +69,7 @@ const Dropdown = ({
 
   useEffect(() => {
     if (isOpen) onOpen?.()
+    // eslint-disable-next-line
   }, [isOpen])
 
   const toggleCollapse = () => !fixedCollapsed && setOpen(!isOpen)

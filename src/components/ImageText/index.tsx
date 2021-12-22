@@ -3,6 +3,7 @@ import { IImage } from '../Image'
 import Image from '../Image'
 import styles from './ImageLink.module.scss'
 import classNames from '../../utils/classNames'
+import { Link } from 'react-router-dom'
 
 interface IImageLink extends IImage {
   link?: string
@@ -11,23 +12,38 @@ interface IImageLink extends IImage {
 }
 
 const ImageLink = ({ link, onRight, children, ...props }: IImageLink) => {
+  const core = (
+    <>
+      <Image {...props} />
+      {children && <div className={styles.text}>{children}</div>}
+    </>
+  )
   if (link) {
-    return (
-      <a
-        className={classNames(styles.container, onRight && styles.right)}
-        href={link}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <Image {...props} />
-        {children && <div className={styles.text}>{children}</div>}
-      </a>
-    )
+    if (link[0] === '/') {
+      return (
+        <Link
+          className={classNames(styles.container, onRight && styles.right)}
+          to={link}
+        >
+          {core}
+        </Link>
+      )
+    } else {
+      return (
+        <a
+          className={classNames(styles.container, onRight && styles.right)}
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {core}
+        </a>
+      )
+    }
   } else {
     return (
       <div className={classNames(styles.container, onRight && styles.right)}>
-        <Image {...props} />
-        {children && <div className={styles.text}>{children}</div>}
+        {core}
       </div>
     )
   }

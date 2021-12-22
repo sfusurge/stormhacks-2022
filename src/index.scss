@@ -38,7 +38,6 @@ $lightOrange: #ffa78c;
   $mobile-font-size
 ) {
   font: $font-weight $font-size $font-family;
-  letter-spacing: 0.03em;
   @if $mobile-font-size {
     @include mobile {
       font-size: $mobile-font-size;
@@ -70,6 +69,12 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  color: $black;
+
+  &.locked {
+    overflow: hidden;
+  }
 }
 
 code {

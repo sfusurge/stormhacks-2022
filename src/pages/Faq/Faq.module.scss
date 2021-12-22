@@ -1,4 +1,5 @@
 @use '../../index.scss' as *;
+
 .container {
   background: url('../../assets/backgrounds/hotPinkBackground.png') top center
     fixed;
@@ -6,6 +7,7 @@
   background-repeat: no-repeat;
   background-attachment: scroll;
   text-align: left;
+  padding-bottom: 300px;
 
   .innerContainer {
     position: relative;
