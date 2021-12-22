@@ -128,11 +128,11 @@ const Tracks = () => {
           </div>
         </div>
       </div>
-      <img
+      <Image
         className={styles.dragonMoonImg}
         src={dragonMoon}
         alt={dragonMoon}
-      ></img>
+      ></Image>
     </div>
   )
 }
