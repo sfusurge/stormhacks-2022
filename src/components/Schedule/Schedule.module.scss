@@ -8,7 +8,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  position: relative;
 }
 
 .textContainer {
@@ -17,6 +16,8 @@
   padding-bottom: 139px;
   width: 43%;
   text-align: left;
+  position: relative;
+  z-index: 1;
   .title {
     @include regular(48px, 'Poppins');
     margin: 0;
