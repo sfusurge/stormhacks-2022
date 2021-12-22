@@ -115,6 +115,17 @@ const execs = [
     link: 'https://www.linkedin.com/in/jeanette-andrews/'
   },
   {
+    src: './therese.png',
+    width: '100px',
+    height: '100px',
+    link: 'https://www.linkedin.com/in/emma-wu-835b34187/'
+  },
+  {
+    src: './gina.png',
+    width: '100px',
+    height: '100px'
+  },
+  {
     src: './priscilla.png',
     width: '100px',
     height: '100px',
@@ -144,6 +155,7 @@ const execs = [
     height: '100px',
     link: 'https://www.linkedin.com/in/emma-wu-835b34187/'
   },
+
   {
     src: './josh.png',
     width: '100px',
@@ -169,12 +181,22 @@ const execs = [
     link: 'https://www.linkedin.com/in/dtjokroa/'
   },
   {
+    src: './danny.png',
+    width: '100px',
+    height: '100px',
+    link: 'https://www.linkedin.com/in/steven-zhu-320044203/'
+  },
+  {
+    src: './john.png',
+    width: '100px',
+    height: '100px'
+  },
+  {
     src: './jocelyn.png',
     width: '100px',
     height: '100px',
     link: 'https://www.linkedin.com/in/jocelyn-gau/'
   },
-
   {
     src: './steven.png',
     width: '100px',
