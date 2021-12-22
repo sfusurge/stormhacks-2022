@@ -4,6 +4,7 @@ import styles from './App.module.scss'
 import ThemeProvider from './context/Theme'
 
 import Footer from './components/Footer'
+import Sponsors from './components/Sponsors'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Router>
           <Switch>
             <Route path="/" exact>
-              <Footer />
+              <Sponsors />
             </Route>
           </Switch>
         </Router>

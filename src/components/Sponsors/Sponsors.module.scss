@@ -70,18 +70,6 @@
     padding-left: 14%;
     padding-right: 19%;
     margin-top: 50px;
-    .sponsorsList {
-      display: flex;
-      flex-flow: row wrap;
-      align-items: stretch;
-      // display: grid;
-      // justify-content: center;
-      // grid-column-gap: 6px;
-      // grid-row-gap: 6px;
-      // grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-    }
-    .sponsorCol {
-      flex: 1 33%;
-    }
+    padding-bottom: 200px;
   }
 }

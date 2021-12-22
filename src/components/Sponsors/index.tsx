@@ -40,6 +40,7 @@ const Sponsors = () => {
           alt={otterInTheClouds}
           className={styles.otterCloudsImg}
         ></Image>
+        {/* 
         <div className={styles.sponsorsList}>
           {sponsors.map(sponsor => (
             <div className={styles.sponsorCol}>
@@ -51,6 +52,7 @@ const Sponsors = () => {
             </div>
           ))}
         </div>
+        */}
       </div>
     </div>
   )
