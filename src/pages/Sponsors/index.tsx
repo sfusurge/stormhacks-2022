@@ -7,8 +7,8 @@ import amazon from '../../assets/sponsors/amazon.png'
 const Sponsors = () => {
   const sponsors = ['amazon', 'amazon', 'amazon', 'amazon']
   return (
-    <div className={styles.container}>
-      <div className={styles.innerContainer}>
+    <div className={styles.background}>
+      <div className={styles.container}>
         <p className={styles.title}>
           Join our <span className={styles.headingBold}>sponsors</span>
         </p>
@@ -19,42 +19,42 @@ const Sponsors = () => {
           challenge students’ limits. Take a look at some of the perks to
           sponsorship.
         </p>
-      </div>
-      <div className={styles.subFooter}>
-        <div className={styles.buttonText}>
-          Sponsor us
-          <Image
-            className={styles.icon}
-            src={emailTeamIcon}
-            alt={emailTeamIcon}
-          />
+        <div className={styles.subFooter}>
+          <div className={styles.buttonText}>
+            Sponsor us
+            <Image
+              className={styles.icon}
+              src={emailTeamIcon}
+              alt={emailTeamIcon}
+            />
+          </div>
+          <p className={styles.normalText}>
+            Interested in sponsoring us? Contact us at
+            <span className={styles.semiBold}> info@stormhacks.com </span>
+          </p>
         </div>
-        <p className={styles.normalText}>
-          Interested in sponsoring us? Contact us at{' '}
-          <span className={styles.semiBold}>info@stormhacks.com </span>
-        </p>
-      </div>
-      <div className={styles.sponsorSection}>
-        <Image
-          src={otterInTheClouds}
-          alt={otterInTheClouds}
-          className={styles.otterCloudsImg}
-        ></Image>
-        <div className={styles.sponsorsList}>
-          {/*
-          
-          /To add when there are sponsors
+        <div className={styles.sponsorSection}>
+          <Image
+            src={otterInTheClouds}
+            alt={otterInTheClouds}
+            className={styles.otterCloudsImg}
+          ></Image>
+          <div className={styles.sponsorsList}>
+            {/*
+            
+            /To add when there are sponsors
 
-          {sponsors.map(sponsor => (
-            <div className={styles.sponsorCol}>
-              <Image
-                src={amazon}
-                alt={amazon}
-                className={styles.otterCloudsImg}
-              ></Image>
-            </div>
-          ))}
-          */}
+            {sponsors.map(sponsor => (
+              <div className={styles.sponsorCol}>
+                <Image
+                  src={amazon}
+                  alt={amazon}
+                  className={styles.otterCloudsImg}
+                ></Image>
+              </div>
+            ))}
+            */}
+          </div>
         </div>
       </div>
     </div>
