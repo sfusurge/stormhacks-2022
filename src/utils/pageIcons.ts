@@ -9,35 +9,35 @@ const pageIcons = [
     id: 'About Us',
     alt: 'Icon to go to the about us page',
     src: aboutUsIcon,
-    link: '',
+    link: '/',
     color: '#FFA78C'
-  },
-  {
-    id: 'FAQ',
-    alt: 'Icon to go to the FAQ page',
-    src: faqIcon,
-    link: '',
-    color: '#FF4B67'
-  },
-  {
-    id: 'Schedule',
-    alt: 'Icon to go to the schedule page',
-    src: scheduleIcon,
-    link: '',
-    color: '#FD75C9'
   },
   {
     id: 'Sponsors',
     alt: 'Icon to go to the sponsors page',
     src: sponsorsIcon,
-    link: '',
+    link: '/sponsors', // TODO
+    color: '#FF4B67'
+  },
+  {
+    id: 'FAQ',
+    alt: 'Icon to go to the FAQ page',
+    src: faqIcon,
+    link: '/faq',
+    color: '#FD75C9'
+  },
+  {
+    id: 'Schedule',
+    alt: 'Icon to go to the schedule page',
+    src: scheduleIcon,
+    link: '/schedule',
     color: '#C964FF'
   },
   {
     id: 'Tracks',
     alt: 'Icon to go to the tracks page',
     src: tracks,
-    link: '',
+    link: '/', // TODO
     color: '#54A2FF'
   }
 ]

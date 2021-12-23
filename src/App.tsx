@@ -3,21 +3,42 @@ import styles from './App.module.scss'
 
 import ThemeProvider from './context/Theme'
 
+import Nav from './components/Nav'
 import Footer from './components/Footer'
-import Sponsors from './components/Sponsors'
+import Schedule from './pages/Schedule'
+import About from './pages/About'
+import FAQ from './pages/Faq'
+import Sponsors from './pages/Sponsors'
+import ScrollProvider from './context/Scroll'
+import ScrollContainer from './components/ScrollContainer'
 
 function App() {
   return (
     <ThemeProvider>
-      <div className={styles.App}>
-        <Router>
-          <Switch>
-            <Route path="/" exact>
-              <Sponsors />
-            </Route>
-          </Switch>
-        </Router>
-      </div>
+      <ScrollProvider>
+        <ScrollContainer>
+          <div className={styles.App}>
+            <Router>
+              <Nav />
+              <Switch>
+                <Route path="/" exact>
+                  <About />
+                </Route>
+                <Route path="/faq">
+                  <FAQ />
+                </Route>
+                <Route path="/schedule">
+                  <Schedule />
+                </Route>
+                <Route path="/sponsors">
+                  <Sponsors />
+                </Route>
+              </Switch>
+              <Footer />
+            </Router>
+          </div>
+        </ScrollContainer>
+      </ScrollProvider>
     </ThemeProvider>
   )
 }

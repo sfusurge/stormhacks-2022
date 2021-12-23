@@ -1,23 +1,15 @@
-@mixin font($font-size: 22px, $font-weight: 400, $font-family) {
-  font: $font-weight $font-size $font-family;
-  letter-spacing: 0.03em;
-}
-
-@mixin regular($font-size, $font-family) {
-  @include font($font-size, 400, $font-family);
-}
-
-@mixin medium($font-size, $font-family) {
-  @include font($font-size, 500, $font-family);
-}
-
-@mixin semiBold($font-size, $font-family) {
-  @include font($font-size, 600, $font-family);
-}
-
-@mixin bold($font-size, $font-family) {
-  @include font($font-size, 700, $font-family);
-}
+$black: #2c2c2c;
+$gray: #5c5c5c;
+$white: #f4f4f4;
+$violet: #b07fff;
+$darkPurple: #bb3cff;
+$purple: #c964ff;
+$hotPink: #de2bc4;
+$pink: #fd75c9;
+$red: #d10b00;
+$salmon: #ff4b67;
+$orange: #f06500;
+$lightOrange: #ffa78c;
 
 @mixin media($size) {
   @media screen and (max-width: $size) {
@@ -28,7 +20,7 @@
 }
 
 @mixin mobile {
-  @include media(500px) {
+  @include media(425px) {
     @content;
   }
 }
@@ -39,6 +31,36 @@
   }
 }
 
+@mixin font(
+  $font-size: 22px,
+  $font-weight: 400,
+  $font-family,
+  $mobile-font-size
+) {
+  font: $font-weight $font-size $font-family;
+  @if $mobile-font-size {
+    @include mobile {
+      font-size: $mobile-font-size;
+    }
+  }
+}
+
+@mixin regular($font-size, $font-family, $mobile-font-size: false) {
+  @include font($font-size, 400, $font-family, $mobile-font-size);
+}
+
+@mixin medium($font-size, $font-family, $mobile-font-size: false) {
+  @include font($font-size, 500, $font-family, $mobile-font-size);
+}
+
+@mixin semiBold($font-size, $font-family, $mobile-font-size: false) {
+  @include font($font-size, 600, $font-family, $mobile-font-size);
+}
+
+@mixin bold($font-size, $font-family, $mobile-font-size: false) {
+  @include font($font-size, 700, $font-family, $mobile-font-size);
+}
+
 .span {
   @include medium(16px, Barlow);
 }
@@ -47,6 +69,12 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  color: $black;
+
+  &.locked {
+    overflow: hidden;
+  }
 }
 
 code {
