@@ -14,12 +14,21 @@ import { ReactComponent as Logo } from '../../assets/logo.svg'
 
 interface IPagesProps {
   onRight?: boolean
+  isSmallDesktop?: boolean
   className?: string
   onClick?: () => void
 }
 
-const Pages = ({ onRight, className, onClick }: IPagesProps) => (
+const Pages = ({
+  onRight,
+  className,
+  isSmallDesktop,
+  onClick
+}: IPagesProps) => (
   <div className={classNames(styles.pages, className)} onClick={onClick}>
+    <div className={styles.text}>
+      <Logo className={styles.logo} /> STORMHACKS
+    </div>
     {pageIcons.map(({ id, color, ...props }) => (
       <div className={styles.page} key={id} style={{ color }}>
         <ImageLink {...props} className={styles.icon} onRight={onRight}>
@@ -49,9 +58,6 @@ const MobileNav = () => {
     <div className={classNames(styles.mobile, isOpen && styles.open)}>
       <div className={styles.background} onClick={() => setOpen(false)}></div>
       <div className={styles.menu}>
-        <div className={styles.text}>
-          <Logo className={styles.logo} /> STORMHACKS
-        </div>
         <Pages onClick={onNavigate} onRight />
         <div className={styles.socials}>
           {socials.map(({ id, srcDark, link }) => (
@@ -79,9 +85,11 @@ const MobileNav = () => {
 }
 
 const DesktopNav = () => {
+  const isSmallDesktop = useQuery('(max-width: 800px)')
+
   return (
-    <div>
-      <Pages className={styles.desktop} />
+    <div className={styles.desktop}>
+      <Pages isSmallDesktop={isSmallDesktop} />
     </div>
   )
 }
