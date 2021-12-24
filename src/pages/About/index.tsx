@@ -53,8 +53,7 @@ const About = () => {
             SFU's largest hackathon and an MLH Member Event for the 2022 Season.
           </p>
           <a className={styles.applyBtn} href="/">
-            Apply Now
-            <EditIcon className={styles.editIcon} />
+            Applications open Dec 27th
           </a>
         </div>
         <Image className={styles.img} src={dreamDesignDevelop} />
