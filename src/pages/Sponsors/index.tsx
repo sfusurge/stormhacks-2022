@@ -19,14 +19,14 @@ const Sponsors = () => {
           challenge students’ limits.
         </p>
         <div className={styles.subFooter}>
-          <div className={styles.buttonText}>
+          <a className={styles.buttonText} href="mailto:info@stormhacks.com">
             Sponsor us
             <Image
               className={styles.icon}
               src={emailTeamIcon}
               alt={emailTeamIcon}
             />
-          </div>
+          </a>
           <p className={styles.normalText}>
             Interested in sponsoring us? Contact us at
             <span className={styles.semiBold}> info@stormhacks.com </span>
