@@ -54,6 +54,7 @@ const About = () => {
           </p>
           <a className={styles.applyBtn} href="/">
             Applications open Dec 27th
+            {/* TODO: uncomment when applications are open <EditIcon className={styles.editIcon} /> */}
           </a>
         </div>
         <Image className={styles.img} src={dreamDesignDevelop} />
