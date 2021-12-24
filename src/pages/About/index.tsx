@@ -39,7 +39,7 @@ const About = () => {
             </ImageLink>
           </div>
           <p className={styles.paragraph}>
-            From February 18-20, 2021, StormHacks welcomes you to collaborate,
+            From February 18-20, 2022, StormHacks welcomes you to collaborate,
             create, and connect with a community of 500+ students across the
             globe. Over the course of 36 hours, you will have the opportunity to
             design and develop a project that tackles real-world problems with
