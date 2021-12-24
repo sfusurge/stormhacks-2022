@@ -95,11 +95,6 @@ const execs = [
     link: 'https://www.linkedin.com/in/nlew/'
   },
   {
-    src: './jeanette.png',
-    name: 'Jeanette Andrews',
-    link: 'https://www.linkedin.com/in/jeanette-andrews/'
-  },
-  {
     src: './therese.png',
     name: 'Therese Wong',
     link: '' //TODO
