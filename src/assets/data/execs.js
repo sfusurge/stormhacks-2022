@@ -75,6 +75,11 @@ const execs = [
     link: 'https://www.linkedin.com/in/sjhe/'
   },
   {
+    src: './hussain.png',
+    name: 'Hussain Attarwala',
+    link: 'https://www.linkedin.com/in/hussain-attarwala-69b849205/'
+  },
+  {
     src: './michelle.png',
     name: 'Michelle Swolfs',
     link: 'https://www.linkedin.com/in/michelleswolfs/'
