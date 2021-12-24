@@ -15,9 +15,8 @@ const Sponsors = () => {
         <p className={styles.paragraph}>
           We’re looking for passionate companies and organizations looking to
           foster talent across the global tech community—people hoping to take
-          on young and innovative minds, presenting meaningful opportunities and
-          challenge students’ limits. Take a look at some of the perks to
-          sponsorship.
+          on young and innovative minds, present meaningful opportunities and
+          challenge students’ limits.
         </p>
         <div className={styles.subFooter}>
           <div className={styles.buttonText}>
