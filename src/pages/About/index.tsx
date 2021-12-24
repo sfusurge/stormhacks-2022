@@ -44,8 +44,8 @@ const About = () => {
             globe. Over the course of 36 hours, you will have the opportunity to
             design and develop a project that tackles real-world problems with
             innovation and insight. If this is your first time attending a
-            hackathon, don't worry— we'll have plenty of workshops and mentors
-            to support you along the way.
+            hackathon, don't worry—we'll have plenty of workshops and mentors to
+            support you along the way.
           </p>
           <p className={styles.paragraph}>
             StormHacks 2021 brought together 300+ hackers from 146 universities,
@@ -53,8 +53,10 @@ const About = () => {
             SFU's largest hackathon and an MLH Member Event for the 2022 Season.
           </p>
           <a className={styles.applyBtn} href="/">
-            Apply Now
-            <EditIcon className={styles.editIcon} />
+            Applications open Dec 27th
+            {/* TODO: uncomment when applications are open 
+             Apply Now
+            <EditIcon className={styles.editIcon} /> */}
           </a>
         </div>
         <Image className={styles.img} src={dreamDesignDevelop} />
