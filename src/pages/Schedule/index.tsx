@@ -55,6 +55,7 @@ const Schedule = () => {
   ]
 
   const applicationsOpen = '2021-12-27T08:00:00Z'
+  /* TODO: change applications closed deadline */
   const dueDate = '2022-01-31T08:00:00Z'
   const [applicationsOpenCountDown, setApplicationsOpenCountDown] = useState(
     getTime(applicationsOpen)
